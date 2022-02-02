@@ -3,15 +3,14 @@ package com.example.todomanager06.boarding;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.example.todomanager06.R;
 import com.example.todomanager06.client.ViewPagerClient;
@@ -21,11 +20,10 @@ import com.example.todomanager06.model.ViewPagerModel;
 import java.util.ArrayList;
 
 
-public class MainBoardFragment extends Fragment  implements  ItemClickListener{
-    private FragmentMainBoardBinding binding;
+public class MainBoardFragment extends Fragment implements ItemClickListener {
     ViewPagerAdapter adapter;
     ArrayList<ViewPagerModel> list = new ArrayList<>();
-
+    private FragmentMainBoardBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,15 +39,17 @@ public class MainBoardFragment extends Fragment  implements  ItemClickListener{
         getData();
 
     }
+
     private void checkOnShow() {
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
         boolean isShow = sharedPreferences.getBoolean("isShow", false);
         if (isShow)
             Navigation.findNavController(requireView()).navigate(R.id.homeFragment);
     }
+
     private void getData() {
         list = ViewPagerClient.getPagerlist();
-        adapter = new ViewPagerAdapter(list,this);
+        adapter = new ViewPagerAdapter(list, this);
         binding.viewpager.setAdapter(adapter);
         binding.dotsIndicator.setViewPager2(binding.viewpager);
     }
@@ -58,6 +58,6 @@ public class MainBoardFragment extends Fragment  implements  ItemClickListener{
     public void itemClick() {
         Navigation.findNavController(requireView()).navigate(R.id.homeFragment);
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
-        sharedPreferences.edit().putBoolean("isShow",true).apply();
+        sharedPreferences.edit().putBoolean("isShow", true).apply();
     }
 }

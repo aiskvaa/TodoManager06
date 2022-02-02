@@ -15,19 +15,19 @@ import java.util.List;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeHolder> {
 
-    private ItemTaskBinding binding;
     List<TaskModel> list;
     Listener listener;
+    private ItemTaskBinding binding;
+
+    public HomeAdapter(List<TaskModel> list, Listener listener) {
+        this.list = list;
+        this.listener = listener;
+    }
 
     @SuppressLint("NotifyDataSetChanged")
     public void delete(TaskModel model) {
         list.remove(model);
         notifyDataSetChanged();
-    }
-
-    public HomeAdapter(List<TaskModel> list, Listener listener) {
-        this.list = list;
-        this.listener = listener;
     }
 
     @NonNull
@@ -48,6 +48,10 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeHolder> {
     }
 
 
+    public interface Listener {
+        void OnLongClick(TaskModel model);
+    }
+
     public class HomeHolder extends RecyclerView.ViewHolder {
         public HomeHolder(@NonNull ItemTaskBinding binding) {
             super(binding.getRoot());
@@ -65,9 +69,5 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeHolder> {
                 }
             });
         }
-    }
-
-    public interface Listener{
-        void OnLongClick(TaskModel model);
     }
 }

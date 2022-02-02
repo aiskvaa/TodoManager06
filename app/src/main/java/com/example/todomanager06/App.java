@@ -7,8 +7,12 @@ import androidx.room.Room;
 import com.example.todomanager06.room.AppDataBase;
 
 public class App extends Application {
-    AppDataBase db;
     public static App app;
+    AppDataBase db;
+
+    public static App getApp() {
+        return app;
+    }
 
     @Override
     public void onCreate() {
@@ -19,9 +23,5 @@ public class App extends Application {
 
     public AppDataBase getDb() {
         return db;
-    }
-
-    public static App getApp() {
-        return app;
     }
 }

@@ -38,7 +38,7 @@ public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.View
     }
 
     public class ViewPagerHolder extends RecyclerView.ViewHolder {
-        private FragmentBoardBinding binding;
+        private final FragmentBoardBinding binding;
 
         public ViewPagerHolder(@NonNull FragmentBoardBinding binding) {
             super(binding.getRoot());
@@ -57,5 +57,6 @@ public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.View
                 }
             });
 
-        }}
+        }
+    }
 }

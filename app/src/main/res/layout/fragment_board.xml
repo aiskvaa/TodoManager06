@@ -8,23 +8,23 @@
 
     <TextView
         android:id="@+id/title_tv"
-       style="@style/BoardingTextViewsWelcome"
+        style="@style/BoardingTextViewsWelcome"
         android:text="@string/welcome_to_productive_life"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/description_tv"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textStyle="bold" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/description_tv"
         style="@style/BoardingTextViewsWelcome"
+        android:text="@string/collaboration_with_students"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/lottie_anim"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/collaboration_with_students"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title_tv" />
 
     <com.airbnb.lottie.LottieAnimationView
@@ -32,47 +32,47 @@
         style="@style/Animation"
         android:src="@color/purple_500"
         app:layout_constraintBottom_toTopOf="@id/skip_btn"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/description_tv" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/skip_btn"
         style="@style/BoardingTextViews"
-        android:backgroundTint="@color/white"
         android:layout_marginHorizontal="15dp"
-        android:text="@string/skip"
         android:layout_marginVertical="20dp"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@id/hint_tv"
+        android:backgroundTint="@color/white"
         android:elevation="8dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/skip"
         android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@+id/lottie_anim"
+        android:textSize="22sp"
         app:icon="@drawable/ic_arrow_forward"
-        app:iconGravity="textEnd" />
+        app:iconGravity="textEnd"
+        app:layout_constraintBottom_toTopOf="@id/hint_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottie_anim" />
 
     <TextView
         android:id="@+id/hint_tv"
-        android:layout_margin="20dp"
         style="@style/BoardingTextViews"
+        android:layout_margin="20dp"
+        android:layout_marginTop="10dp"
         android:text="@string/you_have_an_account_already"
         android:textAlignment="center"
-        android:layout_marginTop="10dp"
+        android:textColor="@android:color/darker_gray"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/sign_in_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@android:color/darker_gray" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/sign_in_btn"
         style="@style/BoardingTextViews"
-        android:text="@string/sign_in"
         android:layout_marginVertical="22dp"
+        android:text="@string/sign_in"
+        android:textAlignment="center"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent" />
 
 

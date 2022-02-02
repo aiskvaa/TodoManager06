@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragment.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/purple_200">
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:id="@+id/view_note"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/ic_note"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <EditText
+        android:id="@+id/name_ed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/grey"
+        android:layout_margin="@dimen/margin_10dp"
+        android:textColorHint="@color/grey"
+        android:hint="name" />
+
+    <EditText
+        android:id="@+id/surname_ed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        android:layout_margin="@dimen/margin_10dp"
+        android:hint="surname"/>
+
+    <Button
+        android:id="@+id/apply_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/oval"
+        android:backgroundTint="@color/purple_200"
+        android:layout_margin="@dimen/margin_10dp"
+        android:text="Подтвердить" />
+
+    <Button
+        android:id="@+id/read_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/oval"
+        android:backgroundTint="@color/purple_200"
+        android:layout_margin="@dimen/margin_10dp"
+        android:text="Читать"
+        />
+
+
+
+</LinearLayout>

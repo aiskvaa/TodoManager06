@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/bottom_con"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal|center_vertical"
     android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
     android:layout_marginTop="20dp"
+    android:layout_marginRight="10dp"
     app:cardCornerRadius="12dp"
-    app:cardUseCompatPadding="true"
-    >
+    app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -31,9 +29,9 @@
         <TextView
             android:id="@+id/date_hint_tv"
             style="@style/DueDateAndRepeat"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="@dimen/margin_10dp"
             android:text="@string/due_date"
-            android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/task_ed" />
 
@@ -51,8 +49,8 @@
             android:id="@+id/repeat_hint_tv"
             style="@style/DueDateAndRepeat"
             android:layout_marginTop="@dimen/margin_10dp"
-            android:text="@string/repeat"
             android:layout_marginEnd="20dp"
+            android:text="@string/repeat"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/task_ed" />
 
@@ -69,18 +67,18 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/apply_btn"
             style="@style/TextAndButton"
+            android:layout_marginVertical="22dp"
             android:background="@drawable/rectangle_button_background"
             android:text="@string/add_new_task"
             android:textAllCaps="false"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginVertical="22dp"
             android:textSize="@dimen/big_text_size"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/choose_date_tv" />
 
         <TextView
-            android:layout_marginVertical="22dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="22dp"
             android:layout_marginTop="10dp"
             android:text="@string/bask_to_task_list"
             android:textAlignment="center"
